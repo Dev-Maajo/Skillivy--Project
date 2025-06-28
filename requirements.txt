@@ -1,0 +1,7 @@
+Flask
+fpdf
+python-docx
+python-dotenv
+requests
+docx2txt
+PyMuPDF

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Resume | Skillivy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📄 Upload Your Resume</h1>
+
+        <form action="{{ url_for('upload_resume') }}" method="post" enctype="multipart/form-data" class="upload-form">
+            <input type="file" name="resume" accept=".pdf,.docx" required>
+            <button type="submit" class="btn">Upload & Analyze</button>
+        </form>
+
+        <div class="actions">
+            <a href="{{ url_for('index') }}" class="btn">🏠 Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

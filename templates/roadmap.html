@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Career Roadmap | Skillivy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Personalized Career Roadmap</h1>
+
+        <div class="box">
+            <p class="roadmap-text">{{ roadmap }}</p>
+        </div>
+
+        <div class="actions">
+            <a href="{{ url_for('index') }}" class="btn">🏠 Back to Home</a>
+            <a href="{{ url_for('result_page') }}" class="btn">📋 View Result</a>
+        </div>
+    </div>
+</body>
+</html>

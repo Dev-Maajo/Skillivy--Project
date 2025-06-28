@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result | Skillivy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 40px;
+            color: #222;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        .box {
+            margin-bottom: 40px;
+        }
+        .box h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .box p {
+            white-space: pre-line; /* Preserves new lines from backend output */
+            line-height: 1.8;
+        }
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #388e3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Resume Feedback</h1>
+
+        <div class="box">
+            <h3>📝 Feedback:</h3>
+            <p>{{ feedback | safe }}</p>
+        </div>
+
+        <div class="box">
+            <h3>🚀 Career Roadmap:</h3>
+            <p>{{ roadmap | safe }}</p>
+        </div>
+
+        <div class="actions">
+            <a href="{{ url_for('download_file', filename='user_feedback.pdf') }}" class="btn" download>📥 Download Feedback PDF</a>
+            <a href="{{ url_for('roadmap_page') }}" class="btn">🔍 View Roadmap</a>
+            <a href="{{ url_for('payment_page') }}" class="btn">💳 Go Premium</a>
+        </div>
+    </div>
+</body>
+</html>

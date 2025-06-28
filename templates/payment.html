@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upgrade to Premium | Skillivy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>💎 Unlock Premium Features</h1>
+
+        <p>Get access to advanced career roadmaps, personalized resume feedback, downloadable reports, and more!</p>
+
+        <ul>
+            <li>✅ Resume review by AI assistant</li>
+            <li>✅ Downloadable feedback PDF</li>
+            <li>✅ Personalized career roadmap</li>
+            <li>✅ Early access to updates</li>
+        </ul>
+
+        <form action="#" method="POST">
+            <!-- You can integrate Razorpay/Stripe here -->
+            <button class="btn" disabled>🔒 Pay ₹199 to Unlock (Coming Soon)</button>
+        </form>
+
+        <div class="actions">
+            <a href="{{ url_for('index') }}" class="btn">🏠 Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
